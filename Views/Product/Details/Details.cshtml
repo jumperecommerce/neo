@@ -695,5 +695,9 @@
             {
             @Html.Partial("~/Views/Product/Details/_FloatingBar.cshtml", Model)
         }
+        <div class="featuredProducts">
+            <!-- ~/Views/Shared/Blocks/Product/_FeaturedProducts.cshtml -->
+            @Html.Action("FeaturedProducts", "Product")
+        </div>
     </div>
 </div>
