@@ -16,7 +16,11 @@ h6.codProduto {
   		border-radius: 4px;
   	}
   }
-	
+.detalhes.produto{
+	.slick-slide.slick-current.slick-active {
+	    border: 1px solid $primary-color;
+	}
+}
 .infoProduto {
 	border: 1px solid $border-color;
 	.box-grade{
