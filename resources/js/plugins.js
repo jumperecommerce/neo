@@ -6,7 +6,7 @@ require("perfect-scrollbar/jquery")($);
 
 /**
  * Slick Carousel
- * kenwheeler.github.io/slick/
+ *
  */
 require("slick-carousel");
 

@@ -15,7 +15,40 @@ $(document).ready(function () {
             active:   '<i class="checkmark icon"></i>'
         }
     });
-
+    $('.box-featured-prod').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows:false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+        
+            slidesToShow: 3,
+            infinite: true,
+            slidesToScroll: 1
+          }
+        },
+        {
+            breakpoint: 520,
+            settings: "unslick"
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
     let $easyzoom = $(".easyzoom").easyZoom();
     $easyzoom.init();
     // Setup thumbnails example

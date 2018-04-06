@@ -10,6 +10,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix-jet/setup/webpack.config.js"
     },
     "dependencies": {
+        "add": "^2.0.6",
         "axios": "^0.17.1",
         "card": "^2.4.0",
         "cross-env": "^5.1.1",
@@ -17,17 +18,20 @@
         "inputmask": "^3.3.8",
         "jetcheckout": "^1.0.4",
         "jetroute": "^1.0.3",
-        "jquery": "^3.1.1",
+        "jquery": "^3.3.1",
         "jquery-ajax-unobtrusive": "^3.2.4",
         "jquery-touch-events": "^1.0.7",
         "jquery-validation": "^1.17.0",
         "mobile-detect": "^1.3.6",
+        "or": "^0.2.0",
+        "owl.carousel": "^2.3.3",
         "perfect-scrollbar": "0.8.1",
         "sass-semantic-ui": "^2.2.12-3",
         "semantic-ui-calendar": "0.0.8",
         "slick-carousel": "^1.7.1",
         "sweetalert2": "^6.11.5",
-        "toastr": "^2.1.2"
+        "toastr": "^2.1.2",
+        "yarn": "^1.5.1"
     },
     "devDependencies": {
         "browser-sync": "^2.18.13",
