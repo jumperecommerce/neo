@@ -117,3 +117,67 @@
     overflow: scroll;
   }
 }
+
+.button.variacao.cor {
+    border-radius: 100%;
+}
+
+.button.checkText {
+    border-radius: 100% !important;
+    height: 15px;
+    width: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    padding: 2px 18px 20px 7px;
+    margin: 0 0 0 1px;
+}
+
+input#initialPrice {
+    height: 25px;
+}
+
+input#finalPrice {
+    height: 24px;
+}
+
+.button.pricefilter {
+    height: 24px;
+    padding: 0;
+}
+
+.pricefilter .icon {
+    margin: 0;
+    padding: 0;
+    top: -6px;
+    position: relative;
+}
+
+.filtros .ui.accordion .title.active {
+    border-bottom: 0px solid #dededf;
+    background-color: #ffffff !important;
+    color: #2c3e50;
+    border-bottom: 1px solid #2c3e50;
+    box-shadow: inset 5px 0 0 #2c3e50;
+}
+.filtros .ui.accordion .title {
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid #dededf;
+    text-transform: uppercase;
+    padding-left: 15px;
+    -webkit-box-shadow: inset 5px 0 0 #2c3e50;
+    box-shadow: inset 5px 0 0 #dededf;
+    margin-bottom: 10px;
+    color: #dededf;
+}
+.variacao.cor {
+    height: 15px;
+    width: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    padding: 12px;
+}

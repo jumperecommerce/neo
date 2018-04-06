@@ -149,6 +149,7 @@ h6.codProduto {
 
 	  .extra {
 		width: auto !important;
+		top:54px;
 	  }
 	}
   }
@@ -156,8 +157,8 @@ h6.codProduto {
   .variacao {
 
 	&.cor {
-	  height: 35px;
-	  width: 35px;
+	  height: 25px;
+	  width: 25px;
 	}
 
 	&.selecionado {
@@ -197,6 +198,7 @@ h6.codProduto {
 #btn_comprejunto{
 	color: $white;
 	background-color: $primary-color;
+	font-size: 1em;
 	&:hover {
 		background:#CACBCD;
 	}

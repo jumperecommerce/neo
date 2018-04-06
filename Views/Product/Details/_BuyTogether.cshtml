@@ -16,7 +16,7 @@
     </div>
     <div class="ui grid stackable">
         <div class="row horizontal divided">
-            <div class="twelve wide computer column">
+            <div class="thirteen wide computer column">
                 <div class="ui items relaxed divided produtos compre junto">
                     <div class="item product-grid">
                         <div class="ui image medium">
@@ -78,11 +78,18 @@
                         int total_variacoes = item.AvailableReferences != null ? item.AvailableReferences.Count() : 0;
 
                         <div class="item buy-together" id="buy-together" data-id="@item.IdProduct" data-variacoes="@total_variacoes">
+                            <div class="extra">
+                                <button class="ui circular icon big toggle button compre junto" data-id="@item.IdProduct" data-variacoes="@total_variacoes" id="adicionar-compre-junto-@item.IdProduct" title="Clique para adicionar o produto ao compre junto." alt="Clique para adicionar o produto ao compre junto.">
+                                    <i class="plus icon"></i>
+                                </button>
+                            </div>
+
                             <div class="ui image small">
                                 <a href="@(item.UrlFriendlyCustom != null ? item.UrlFriendlyCustom : item.UrlFriendly)">
                                     <img src="@item.ImageHome" alt=""  onerror="imgError(this)">
                                 </a>
                             </div>
+
                             <div class="content">
                                 <a href="@(item.UrlFriendlyCustom != null ? item.UrlFriendlyCustom : item.UrlFriendly)" class="header">@item.Name</a>
                                 <div class="meta">
@@ -114,11 +121,6 @@
                                     }
                                 </div>
                             </div>
-                            <div class="extra">
-                                <button class="ui circular icon big toggle button compre junto" data-id="@item.IdProduct" data-variacoes="@total_variacoes" id="adicionar-compre-junto-@item.IdProduct">
-                                    <i class="plus icon"></i>
-                                </button>
-                            </div>
 
 
                             <!-- COMEÇO VARIÁVEIS PRODUTO - COMPRE JUNTO-->
@@ -148,7 +150,7 @@
 
                 </div>
             </div>
-            <div class="ui rail four wide computer column compre junto">
+            <div class="ui rail three wide computer column compre junto">
                 <div class="ui sticky comprar junto">
                     <table class="ui table">
                         <thead>

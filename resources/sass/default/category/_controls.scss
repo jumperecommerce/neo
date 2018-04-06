@@ -1,7 +1,18 @@
+.title-controls-bar{
+	float: left;
+	margin-right: 25px;
+}
+.controls-bar{
+	display: block;
+	min-height: 50px;
+}
 .cat-controls-bar{
+	float: right;
+	width: auto;
 	.button.dropdownorder, #viewlist, #viewgrid{
 		border: 1px solid $primary-color;
 		background: $white;
 		color:$primary-color;
+		padding: 4px;
 	}
 }

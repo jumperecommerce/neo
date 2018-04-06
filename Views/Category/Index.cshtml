@@ -4,6 +4,15 @@
     Layout = "~/Views/Shared/Base/_LayoutBreadCrumbLeftSideBar.cshtml";
     var returnUrl = HttpContext.Current.Request.Url.AbsolutePath;
 }
+@section banner {
+    @if (Model != null)
+    {
+        <div class="sixteen wide column">
+            <!-- ~/Views/Shared/Blocks/Banner/_BannerCategory.cshtml -->
+            @Html.Action("BannerCategory", "Banner", new { id = Model.IdCategory, type = 'F' })
+        </div>
+    }
+}
 @section breadcrumbs {
     <div class="ui container">
         <div class="ui two column grid stackable middle aligned">
@@ -21,61 +30,44 @@
         </div>
     </div>
 }
-@section banner {
-    @if (Model != null)
-    {
-        <div class="sixteen wide column">
-            <!-- ~/Views/Shared/Blocks/Banner/_BannerCategory.cshtml -->
-            @Html.Action("BannerCategory", "Banner", new { id = Model.IdCategory, type = 'F' })
-        </div>
-    }
-}
 @section filters {
     <div class="four wide column filterColumn">
-        <div class="row one column">
-            <!-- Page: ~/Views/Shared/Common/_FilterMenu.cshtml -->
-            @Html.Action("FilterMenu", "Product")
-            <div class="ui divider hidden"></div>
-            <!-- Page: ~/Views/Shared/Blocks/Banner/_SideHalfBanner.cshtml -->
-            @Html.Action("SideHalfBannerCategory", "Banner", new { categoryId = Model.IdCategory })
-        </div>
-    </div>
-}
-<div class="twelve wide column">
-    <div class="ui grid">
-        <div class="row one column">
-            <div class="column right aligned right floated cat-controls-bar">
+        <div class="column controls-bar">
+            <div class="column one floated title-controls-bar">
+                <h4>Filtros</h4>
+            </div>
+            <div class="column five floated cat-controls-bar">
                 <button class="ui mobile only left floated icon blue button filterbutton right labeled" data-tooltip="Filtros" data-inverted="">
                     <i class="filter icon"></i>
                     Filtros
                 </button>
                 <div class="ui dropdown button dropdownorder">
-                    <span class="text">Ordenar por</span>
+                    <span class="text"><i class="sort alphabet ascending icon"></i></span>
                     <i class="dropdown icon"></i>
                     <div class="menu">
                         <div class="item" data-value="lancamentos">
                             <i class="asterisk icon"></i>
-                            Lançamentos
+                            New
                         </div>
                         <div class="item" data-value="mais_vendidos">
                             <i class="diamond icon"></i>
-                            Mais Vendidos
+                            Hot seller
                         </div>
                         <div class="item" data-value="nome_a_z">
                             <i class="sort alphabet ascending icon"></i>
-                            Nome [A-Z]
+                            [A-Z]
                         </div>
                         <div class="item" data-value="nome_z_a">
                             <i class="sort alphabet descending icon"></i>
-                            Nome [Z-A]
+                            [Z-A]
                         </div>
                         <div class="item" data-value="menor_preco">
                             <i class="sort numeric ascending icon"></i>
-                            Preço [Menor-Maior]
+                            R$
                         </div>
                         <div class="item" data-value="maior_preco">
                             <i class="sort numeric descending icon"></i>
-                            Preço [Maior-Menor]
+                            R$
                         </div>
                     </div>
                 </div>
@@ -86,7 +78,20 @@
                     <i class="list layout icon"></i>
                 </button>
             </div>
+            <div class="row"></div>
         </div>
+        <div class="column">
+            <!-- Page: ~/Views/Shared/Common/_FilterMenu.cshtml -->
+            @Html.Action("FilterMenu", "Product")
+            <div class="ui divider hidden"></div>
+            <!-- Page: ~/Views/Shared/Blocks/Banner/_SideHalfBanner.cshtml -->
+            @Html.Action("SideHalfBannerCategory", "Banner", new { categoryId = Model.IdCategory })
+        </div>
+    </div>
+}
+<div class="twelve wide column">
+    <div class="ui grid">
+        
     </div>
     <div id="list">
         <!-- ~/Views/Shared/Blocks/Product/_ProductsCategoryList.cshtml -->
